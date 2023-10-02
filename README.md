@@ -19,11 +19,11 @@ Welcome to Sol-EVM NFT Bridge! This application facilitates the migration of NFT
     - [4. User Profiles](#4-user-profiles)
   - [Built With](#built-with)
   - [Link to Smart Contracts](#link-to-smart-contracts)
-  - [Getting Started](#getting-started)
+- [Getting Started](#getting-started)
   - [Usage](#usage)
   - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+- [License](#license)
+- [Contact](#contact)
 
 ## About the Project
 
@@ -57,7 +57,7 @@ Each user can manage their profile, providing essential information and preferen
 
 Visit our smart contracts repository for detailed implementation of blockchain interactions: [NFT Bridge Contracts](https://github.com/mojalil/NFT-Bridge-Contracts).
 
-## Getting Started
+# Getting Started
 
 1. Clone the repo: `git clone https://github.com/mojalil/NFT-Bridge-Frontend.git`
 2. Install dependencies: `npm install`
@@ -77,11 +77,11 @@ Community contributions are vital and appreciated:
 4. Push to the Branch (`git push origin feature/InnovativeFeature`)
 5. Open a Pull Request
 
-## License
+# License
 
 Refer to the `LICENSE` file in the repository for information on licensing.
 
-## Contact
+# Contact
 
 Twitter: [@motypes](https://twitter.com/motypes)
 
