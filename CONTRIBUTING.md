@@ -6,6 +6,7 @@
   - [Todos](#todos)
   - [Wallet Considerations](#wallet-considerations)
   - [Tech Stack](#tech-stack)
+  - [Mechanism](#mechanism)
   - [Resources](#resources)
 
 ## Todos
@@ -39,6 +40,19 @@ We've decided on
 Smart Contracts (See backend Repo)
 1. Foundry
 2. Thirdweb
+
+## Mechanism
+The way that we will bridge assets.
+
+Burn:
+1. Check users wallet for elibible tokens
+2. If eligible, allow users to burn nfts (send them to burn address)
+3. Add list of NFTs user is allowed to mint on new chain. 
+4. Ask user to input Eth wallet address to mint new NFTs
+
+Mint:
+1. User connects eth account
+2. Show user interface to mint new NFTs on chain
 
 ## Resources
 
