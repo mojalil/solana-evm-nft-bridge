@@ -6,11 +6,12 @@
   - [Todos](#todos)
   - [Wallet Considerations](#wallet-considerations)
   - [Tech Stack](#tech-stack)
+  - [Resources](#resources)
 
 ## Todos
 - Complete Sidebar ✅
 - Add Sign In ✅
-- Add MobileSidebar 
+- Add MobileSidebar ✅ 
 - Create dashboard 
   - History component
   - Create burn page
@@ -38,3 +39,7 @@ We've decided on
 Smart Contracts (See backend Repo)
 1. Foundry
 2. Thirdweb
+
+## Resources
+
+[Migrating from solana to BSC](https://docs.bnbchain.org/docs/migration/non-evm-chains/solana/token-migration)
