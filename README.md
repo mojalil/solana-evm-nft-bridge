@@ -2,8 +2,7 @@
 
 [![Solana Version](https://img.shields.io/badge/Solana-1.8.0-yellow?logo=solana)](https://solana.com/)
 [![Ethers.js](https://img.shields.io/badge/Ethers.js-5.5.0-blue?logo=ethers.js)](https://docs.ethers.io/)
-[![Twitter Follow](https://img.shields.io/twitter/follow/YourTwitterHandle?style=social)](https://twitter.com/YourTwitterHandle)
-![Architecture](https://github.com/mojalil/NFT-Bridge-Frontend/assets/YourImageLink)
+[![Twitter Follow](https://img.shields.io/twitter/follow/motypes?style=social)](https://twitter.com/motypes)
 
 Welcome to Sol-EVM NFT Bridge! This application facilitates the migration of NFTs from Solana to EVM-based chains, offering users a seamless experience in transferring their valuable assets between different blockchain ecosystems.
 
