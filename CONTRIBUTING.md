@@ -50,6 +50,11 @@ Burn:
 3. Add list of NFTs user is allowed to mint on new chain. 
 4. Ask user to input Eth wallet address to mint new NFTs
 
+Burn Failure Cases:
+- Token has already been claimed
+- Token has already been minted
+- No eligible tokens in wallet
+
 Mint:
 1. User connects eth account
 2. Show user interface to mint new NFTs on chain
