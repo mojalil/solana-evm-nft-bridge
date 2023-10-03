@@ -29,10 +29,21 @@ type SolanaToken = {
 }
 
 // Get solana tokens list from json data
-export const getSolanaTokenAddresses = async( data: SolanaToken[]) => {
+export const getSolanaTokenAddresses = ( data: SolanaToken[]) => {
   const solanaTokenAddresses = data.map((token) => {
-    return token.contract
+    return token.identifier
   })
   return solanaTokenAddresses
 }
 
+// Check if tokens are in the list of solana tokens
+export const checkIfSolanaToken = async( token: string, solanaTokenAddresses: string[]) => {
+  return solanaTokenAddresses.includes(token)
+}
+
+// Check if an array of tokens are in the list of solana tokens
+export const checkIfSolanaTokens = async( tokens: string[], solanaTokenAddresses: string[]) => {
+  return tokens.every(token => solanaTokenAddresses.includes(token))
+}
+
+export const fetcher = (url: string) => fetch(url).then((res) => res.json());
