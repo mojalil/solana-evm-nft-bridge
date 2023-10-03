@@ -1,10 +1,13 @@
+import SolanaTokens from "@/components/SolanaTokens";
 const DashboardPage = () => {
-    return (
-        <div className="h-full p-4 space-y-2">
-            Dashboard
-           
-        </div>
-    )
-}
+
+  return (<div className="h-full p-4 space-y-2">
+    Dashboard
+    <div>
+        <SolanaTokens />
+    </div>
+  
+  </div>);
+};
 
 export default DashboardPage;
