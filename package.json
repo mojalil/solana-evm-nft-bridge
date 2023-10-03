@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@metaplex-foundation/js": "^0.19.5",
+    "@project-serum/anchor": "^0.26.0",
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.5",
     "@radix-ui/react-slot": "^1.0.2",
-    "@thirdweb-dev/react": "^3.14.40",
-    "@thirdweb-dev/sdk": "^3.10.59",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.34",
+    "@solana/wallet-adapter-wallets": "^0.19.22",
+    "@thirdweb-dev/react": "^3.16.0",
+    "@thirdweb-dev/sdk": "^3.10.62",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
