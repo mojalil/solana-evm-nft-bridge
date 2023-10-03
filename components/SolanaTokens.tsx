@@ -26,12 +26,12 @@ const SolanaTokens = () => {
   //Handle the loading state
   if (!data) return <div>Loading...</div>;
 
-  console.log(solanaTokens);
-
-  return (<div>Solana Tokens
-
-    <div>{`Total number of tokens - ${solanaTokens.length}`}</div>
-  </div>);
+  return (
+    <div>
+      Solana Tokens
+      <div>{`Total number of tokens - ${solanaTokens.length}`}</div>
+    </div>
+  );
 };
 
 export default SolanaTokens;

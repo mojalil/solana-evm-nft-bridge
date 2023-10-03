@@ -5,6 +5,7 @@ import {
   metamaskWallet,
   coinbaseWallet,
   walletConnect,
+  phantomWallet,
 } from "@thirdweb-dev/react";
 
 type ThirdwebProviderProps = {
@@ -15,7 +16,7 @@ const ThirdwebProviderWrapper = ({ children }: ThirdwebProviderProps) => {
   return (
     <ThirdwebProvider
       activeChain="localhost"
-      supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect()]}
+      supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect(), phantomWallet()]}
     >
       {children}
     </ThirdwebProvider>
