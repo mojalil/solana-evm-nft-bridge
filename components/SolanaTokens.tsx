@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import useSWR from "swr";
 import WalletMultiButtonDynamic from "@/components/WalletMultiButtonDynamic";
 import WalletDisconnectButtonDynamic from "./WalletDisconnectButtonDynamic";
+import SolanaNFTs from "./SolanaNFTs";
 
 const SolanaTokens = () => {
   const { data, error } = useSWR("/api/getsolanatokens", fetcher);
@@ -32,16 +33,15 @@ const SolanaTokens = () => {
     marginTop: "1.5rem",
     display: "flex",
     gap: "2rem",
-}
+  };
   return (
     <div>
       Solana Tokens
       <div>{`Total number of tokens - ${solanaTokens.length}`}</div>
-      <div
-      style={buttonStyles}
-      ></div>
+      <div style={buttonStyles}></div>
       <WalletMultiButtonDynamic />
       <WalletDisconnectButtonDynamic />
+      {/* <SolanaNFTs /> */}
     </div>
   );
 };
