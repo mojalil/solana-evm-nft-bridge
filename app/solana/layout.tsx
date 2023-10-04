@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import SolanaWalletProvider from "@/components/SolanaWalletProvider";
 import ThirdwebProviderSolanaWrapper from "@/components/ThirdwebProviderSolana";
 
 
@@ -16,11 +17,9 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       <div className="hidden md:flex flex-col fixed w-20 mt-16 inset-y-0">
         <Sidebar />
       </div>
-      <ThirdwebProviderSolanaWrapper>
-
+      <SolanaWalletProvider>
       <main className="md:pl-20 pt-16 h-full">{children}</main>
-
-      </ThirdwebProviderSolanaWrapper>
+      </SolanaWalletProvider>
     </div>
   );
 };
