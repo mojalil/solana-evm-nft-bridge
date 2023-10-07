@@ -2,6 +2,7 @@
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { useNFTs, useProgram } from "@thirdweb-dev/react/solana";
 import { use, useEffect } from "react";
+import SolanaWalletNFTs from "./SolanaWalletNFTs";
 
 const SolanaNFTs = () => {
     const wallet = useWallet();
@@ -32,6 +33,9 @@ const SolanaNFTs = () => {
     return(
         <div>
             Solana NFTs
+            {
+                (walletAddress && <SolanaWalletNFTs userAddress={walletAddress} />)
+            }
         </div>
     )
 }
