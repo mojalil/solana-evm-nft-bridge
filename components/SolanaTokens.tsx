@@ -18,12 +18,15 @@ const SolanaTokens = () => {
       // filter and get the tokens addresses from the data
       const tokens = getSolanaTokenAddresses(data);
       // get unique token addresses from solanaTokens
-      const uniqueTokens = tokens.filter((token, index) => {
-        return solanaTokens.indexOf(token) === index;
+      // get unique token addresses from tokens
+      const uniqueTokens = tokens.filter((token, index, self) => {
+        return self.indexOf(token) === index;
       });
-      setSolanaTokens(uniqueTokens);
+      setSolanaTokens((prevTokens) => {
+        return uniqueTokens;
+      });
     }
-  }, [data, solanaTokens]);
+  }, [data]);
 
   //Handle the error state
   if (error) return <div>Failed to load</div>;
@@ -41,7 +44,7 @@ const SolanaTokens = () => {
       <div style={buttonStyles}></div>
       <WalletMultiButtonDynamic />
       <WalletDisconnectButtonDynamic />
-      {/* <SolanaNFTs /> */}
+      <SolanaNFTs />
     </div>
   );
 };
