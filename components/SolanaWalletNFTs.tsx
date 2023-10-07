@@ -7,7 +7,8 @@ interface SolanaWalletNFTsProps {
   userAddress: string;
 }
 
-// Load environment variables from .env
+// Load environment variables from .env, this should be on the server
+// side and not in the client side code.
 
 const QUICKNODE_URI_SOLANA_MAINNET = process.env.QUICKNODE_URI_SOLANA_MAINNET || "";
 
