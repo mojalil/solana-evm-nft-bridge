@@ -4,48 +4,26 @@ import { Metaplex } from "@metaplex-foundation/js";
 import type { Metadata, Nft, Sft } from "@metaplex-foundation/js";
 
 interface SolanaWalletNFTsProps {
-  userAddress: string;
+  walletAddress: string;
 }
 
-// Load environment variables from .env, this should be on the server
-// side and not in the client side code.
-
-const QUICKNODE_URI_SOLANA_MAINNET = process.env.QUICKNODE_URI_SOLANA_MAINNET || "";
-
-
-const SolanaWalletNFTs: React.FC<SolanaWalletNFTsProps> = ({ userAddress }) => {
+const SolanaWalletNFTs: React.FC<SolanaWalletNFTsProps> = ({ walletAddress }) => {
   const [nfts, setNfts] = useState<(Metadata | Nft | Sft)[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchNFTs = async () => {
-      try {
-        const connection = new Connection(
-            QUICKNODE_URI_SOLANA_MAINNET,
-            
-        );
-        const publicKey = new PublicKey(userAddress);
-
-        const metaplex = new Metaplex(connection);
-
-        const nftData = await metaplex
-          .nfts()
-          .findAllByOwner({ owner: publicKey });
-
-        nftData.forEach((nft) => {
-          console.log('nft data from metaplex',nft);
-        });
-
-        setNfts(nftData);
-      } catch (error) {
-        console.error("Error fetching NFTs:", error);
-      } finally {
+        // get nfts from api endpoint, that takes query params of userAddress
+        const res = await fetch(`/api/getwalletnfts?walletAddress=${walletAddress}`);
+        const data = await res.json();
+        console.log("data", data);
+        setNfts(data);
         setLoading(false);
-      }
+      
     };
 
     fetchNFTs();
-  }, [userAddress]);
+  }, [walletAddress]);
 
   if (loading) return <div>Loading...</div>;
 

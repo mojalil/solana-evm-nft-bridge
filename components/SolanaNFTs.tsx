@@ -34,7 +34,7 @@ const SolanaNFTs = () => {
         <div>
             Solana NFTs
             {
-                (walletAddress && <SolanaWalletNFTs userAddress={walletAddress} />)
+                (walletAddress && <SolanaWalletNFTs walletAddress={walletAddress} />)
             }
         </div>
     )
