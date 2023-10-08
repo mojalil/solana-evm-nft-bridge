@@ -21,8 +21,6 @@ export async function GET(request: NextRequest) {
     .nfts()
     .findAllByOwner({ owner: publicKey });
 
-    console.log("nftData", nftData);
-
     return new NextResponse(JSON.stringify(nftData), {
         status: 200,
         headers: {

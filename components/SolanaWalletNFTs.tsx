@@ -8,7 +8,7 @@ interface SolanaWalletNFTsProps {
 }
 
 const SolanaWalletNFTs: React.FC<SolanaWalletNFTsProps> = ({ walletAddress }) => {
-  const [nfts, setNfts] = useState<(Metadata | Nft | Sft)[]>([]);
+  const [nfts, setNfts] = useState<(Metadata)[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const SolanaWalletNFTs: React.FC<SolanaWalletNFTsProps> = ({ walletAddress }) =>
       ) : (
         <ul>
           {nfts.map((nft, index) => (
-            <li key={index}>{`Mint: ${nft.address}, Amount: ${nft.name}`}</li>
+            <li key={index}>{`Mint: ${nft.mintAddress}, Amount: ${nft.name}`}</li>
           ))}
         </ul>
       )}
