@@ -42,8 +42,8 @@ export const checkIfSolanaToken = async( token: string, solanaTokenAddresses: st
 }
 
 // Check if an array of tokens are in the list of solana tokens
-export const checkIfSolanaTokens = async( tokens: string[], solanaTokenAddresses: string[]) => {
-  return tokens.every(token => solanaTokenAddresses.includes(token))
+export const checkIfSolanaTokens = ( tokens: string[], solanaTokenAddresses: string[]) => {
+  return tokens.filter(token => solanaTokenAddresses.includes(token))
 }
 
 export const fetcher = (url: string) => fetch(url).then((res) => res.json());
