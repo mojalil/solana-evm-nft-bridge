@@ -13,7 +13,7 @@ export function isMobile() {
 
 
 // Create an interface for the data
-type SolanaToken = {
+export type SolanaToken = {
   identifier: string,
   collection: string,
   contract: string,
