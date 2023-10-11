@@ -12,24 +12,6 @@ interface SolanaWalletNFTsProps {
   walletAddress: string;
 }
 
-// convert this json into a type that typescript can understand
-// {
-//   "identifier": "2Benya9HDJpVtDCjxNdhJ977TowCwyeknsdjEDeVQfVq",
-//   "collection": "foundingfrens",
-//   "contract": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
-//   "token_standard": "metaplex",
-//   "name": "Founding Frens Lawyer #46",
-//   "description": "The Founding Frens collection contains 1700 handcrafted NFTs of investors & lawyers in the OpenFren ecosystem. Want to know more? Checkout nft.openfren.com",
-//   "image_url": "https://i.seadn.io/gae/NTVKH8YA-1W5RuJOzhNfoQf_II9gbgZ44WZes8bissgIijqo8ak4ofmzYMqs5wikFFEqDaF9NI4HZlnLC8IWpHp73elO1jfp99-x?w=500&auto=format",
-//   "metadata_url": "https://arweave.net/ykKqGopFO1PtMuN9EWlyCg70dTmQqGzcXATPjJ5T7ek",
-//   "created_at": "",
-//   "updated_at": "2022-09-16T16:20:31.876993",
-//   "is_disabled": false,
-//   "is_nsfw": false
-// },
-
-
-
 const SolanaWalletNFTs: React.FC<SolanaWalletNFTsProps> = ({ walletAddress }) => {
   const [nfts, setNfts] = useState<(Metadata)[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -96,28 +78,20 @@ const SolanaWalletNFTs: React.FC<SolanaWalletNFTsProps> = ({ walletAddress }) =>
 
   return (
     <div>
-
-
     <div>
-      <h1>Your NFTs</h1>
       {nfts.length === 0 ? (
         <p>No NFTs found in wallet.</p>
       ) : (
-        <ul>
-          {nfts.map((nft, index) => (
-            <li key={index}>{`Mint: ${nft.mintAddress}, Amount: ${nft.name}`}</li>
-          ))}
-        </ul>
+       <p>Found {nfts.length} NFTs in wallet.</p>
       )}
     </div>
     <div>
       {walletFoundingFrens.length > 0 && (
         <div>
-          <h1>Founding Frens NFTs</h1>
+          <h1>You have {walletFoundingFrens.length} founding frens</h1>
           <ul>
             {walletFoundingFrens.map((nft, index) => (
               <div key={nft}>
-              <h1>Found NFT</h1>
               <NFTPreview imageUrl={"https://i.seadn.io/gae/NTVKH8YA-1W5RuJOzhNfoQf_II9gbgZ44WZes8bissgIijqo8ak4ofmzYMqs5wikFFEqDaF9NI4HZlnLC8IWpHp73elO1jfp99-x?w=500&auto=format"} tokenAddress={nft} />
               </div>
             ))}
