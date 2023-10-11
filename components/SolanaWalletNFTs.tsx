@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Connection, PublicKey } from "@solana/web3.js";
-import { Metaplex } from "@metaplex-foundation/js";
-import type { Metadata, Nft, Sft } from "@metaplex-foundation/js";
+import type { Metadata} from "@metaplex-foundation/js";
 import { checkIfSolanaTokens, fetcher, getSolanaTokenAddresses } from "@/lib/utils";
 import useSWR from "swr";
-import { AbsoluteString } from "next/dist/lib/metadata/types/metadata-types";
 import NFTPreview from "./NFTPreview";
 import {SolanaToken} from "@/lib/utils";
 
