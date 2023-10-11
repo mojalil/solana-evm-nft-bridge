@@ -62,3 +62,5 @@ Mint:
 ## Resources
 
 [Migrating from solana to BSC](https://docs.bnbchain.org/docs/migration/non-evm-chains/solana/token-migration)
+[Solana Cookbook - Get NFTs](https://solanacookbook.com/references/nfts.html#how-to-get-all-nfts-from-a-wallet)
+[NextJS Route Handler](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
